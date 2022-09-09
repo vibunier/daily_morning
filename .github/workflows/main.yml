@@ -1,7 +1,7 @@
 name: morning
 on:
   schedule:
-  - cron:  '0 0 * * *'
+  - cron:  '30 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -20,13 +20,13 @@ jobs:
       with:
         python-version: '3.x'
         architecture: 'x64'
-    - run: pip install -r ./requirements.txt && python ./main.py
+    - run: pip install -r ./requirements.txt && python ./new/main-new.py
 
-    env:
-      APP_ID: ${{ secrets.APP_ID }}
-      APP_SECRET: ${{ secrets.APP_SECRET }}
-      TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
-      USER_ID: ${{ secrets.USER_ID }}
-      START_DATE: ${{ secrets.START_DATE }}
-      BIRTHDAY: ${{ secrets.BIRTHDAY }}
-      CITY: ${{ secrets.CITY }}
+#    env:
+#      APP_ID: ${{ secrets.APP_ID }}
+#      APP_SECRET: ${{ secrets.APP_SECRET }}
+#      TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
+#      USER_ID: ${{ secrets.USER_ID }}
+#      START_DATE: ${{ secrets.START_DATE }}
+#      BIRTHDAY: ${{ secrets.BIRTHDAY }}
+#      CITY: ${{ secrets.CITY }}
